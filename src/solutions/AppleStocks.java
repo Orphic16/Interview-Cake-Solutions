@@ -1,3 +1,5 @@
+package solutions;
+
 public class AppleStocks {
 	public static int getMaxProfit(int[] stockPricesYesterday) {
 		int maxProfit = 0;
