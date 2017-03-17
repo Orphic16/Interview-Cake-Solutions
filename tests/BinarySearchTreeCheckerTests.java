@@ -3,7 +3,7 @@ import org.junit.Test;
 import solutions.*;
 import utils.*;
 
-public class BalancedBinaryTreeTests {
+public class BinarySearchTreeCheckerTests {
 	@Test
 	public void test() {
 		BinaryTreeNode root = new BinaryTreeNode(6);
@@ -11,7 +11,7 @@ public class BalancedBinaryTreeTests {
 		left.insertLeft(1);
 		left.insertRight(4);		
 		
-		assertTrue(BalancedBinaryTree.isSuperBalanced(root));
+		assertTrue(BinarySearchTreeChecker.isBst(root));
 	}
 	
 	@Test
@@ -22,7 +22,7 @@ public class BalancedBinaryTreeTests {
 		left.insertLeft(1);
 		left.left.insertLeft(0);
 		
-		assertFalse(BalancedBinaryTree.isSuperBalanced(root));
+		assertTrue(BinarySearchTreeChecker.isBst(root));
 	}
 	
 	@Test
@@ -34,6 +34,22 @@ public class BalancedBinaryTreeTests {
 		right.insertRight(14);
 		right.right.insertRight(16);
 		
-		assertFalse(BalancedBinaryTree.isSuperBalanced(root));
+		assertTrue(BinarySearchTreeChecker.isBst(root));
+	}
+	
+	@Test
+	public void testNonBstTree() {
+		BinaryTreeNode root = new BinaryTreeNode(6);
+		root.insertLeft(8);
+		
+		assertFalse(BinarySearchTreeChecker.isBst(root));
+	}
+	
+	@Test
+	public void testNonBstTree2() {
+		BinaryTreeNode root = new BinaryTreeNode(8);
+		root.insertRight(6);
+		
+		assertFalse(BinarySearchTreeChecker.isBst(root));
 	}
 }
