@@ -10,6 +10,18 @@ public class FindInOrderedSetTests {
 	}
 	
 	@Test
+	public void testLastValue() {
+		int[] values = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 };		
+		assertTrue(FindInOrderedSet.binarySearch(values, 8));
+	}
+	
+	@Test
+	public void testFirstValue() {
+		int[] values = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 };		
+		assertTrue(FindInOrderedSet.binarySearch(values, 1));
+	}
+	
+	@Test
 	public void testMissingValue() {
 		int[] values = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 };		
 		assertFalse(FindInOrderedSet.binarySearch(values, 9));
