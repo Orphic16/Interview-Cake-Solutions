@@ -76,5 +76,35 @@ public class MakingChangeTests {
 		assertEquals("5 5 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1", list.get(10));
 		assertEquals("5 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1", list.get(11));
 		assertEquals("1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1", list.get(12));
+	}	
+	
+	@Test
+	public void testCount() {
+		int[] denominations = new int[]{1, 2, 3 };		
+		assertEquals(4, MakingChange.count(4, denominations));
+	}
+	
+	@Test
+	public void testCount8() {
+		int[] denominations = new int[]{1, 5, 10, 25, 100 };		
+		assertEquals(2, MakingChange.count(8, denominations));
+	}
+	
+	@Test
+	public void testCount12() {
+		int[] denominations = new int[]{1, 5, 10, 25, 100 };		
+		assertEquals(4, MakingChange.count(12, denominations));
+	}
+	
+	@Test
+	public void testCount24() {
+		int[] denominations = new int[]{1, 5, 10, 25, 100 };
+		assertEquals(9, MakingChange.count(24, denominations));
+	}
+	
+	@Test
+	public void testCount25() {
+		int[] denominations = new int[]{1, 5, 10, 25, 100 };
+		assertEquals(13, MakingChange.count(25, denominations));
 	}
 }

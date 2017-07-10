@@ -31,4 +31,18 @@ public class MakingChange {
 			}	
 		}
 	}
+	
+	public static long count(int total, int[] denominations) {
+		long[] memory = new long[total+1];	
+		
+		memory[0] = 1;
+		
+		for (int i=0; i<denominations.length; i++) {
+			for (int j=denominations[i]; j<=total; j++) {
+				memory[j] += memory[j - denominations[i]];
+			}
+		}
+				
+		return memory[total];
+	}
 }
