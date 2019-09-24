@@ -1,6 +1,7 @@
-import static org.junit.Assert.*;
-import org.junit.Test;
-import solutions.*;
+import org.junit.jupiter.api.Test;
+import solutions.FindRotationPoint;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FindRotationPointTests {
 	@Test

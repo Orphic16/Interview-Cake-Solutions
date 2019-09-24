@@ -1,5 +1,5 @@
-import org.junit.Test;
-import solutions.*;
+import org.junit.jupiter.api.Test;
+import solutions.Shuffle;
 
 public class ShuffleTests {
 	@Test

@@ -1,9 +1,9 @@
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+import solutions.MakingChange;
 
 import java.util.ArrayList;
 
-import org.junit.Test;
-import solutions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MakingChangeTests {
 	@Test

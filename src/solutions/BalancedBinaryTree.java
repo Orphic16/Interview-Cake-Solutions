@@ -1,6 +1,7 @@
 package solutions;
 
-import utils.*;
+import utils.BinaryTreeNode;
+
 import java.util.Stack;
 
 public class BalancedBinaryTree {	

@@ -1,6 +1,8 @@
-import static org.junit.Assert.*;
-import org.junit.Test;
-import solutions.*;
+import org.junit.jupiter.api.Test;
+import solutions.BracketValidator;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class BracketValidatorTests {
 	@Test
@@ -12,7 +14,7 @@ public class BracketValidatorTests {
 	public void testUnbalanced() {
 		assertFalse(BracketValidator.isValid("[[{()}]"));
 	}
-	
+
 	@Test
 	public void testUnbalanced2() {
 		assertFalse(BracketValidator.isValid("[{()}]]"));

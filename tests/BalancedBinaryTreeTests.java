@@ -1,7 +1,10 @@
-import static org.junit.Assert.*;
-import org.junit.Test;
-import solutions.*;
-import utils.*;
+import org.junit.jupiter.api.Test;
+import solutions.BalancedBinaryTree;
+import utils.BinaryTreeNode;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 public class BalancedBinaryTreeTests {
 	@Test
