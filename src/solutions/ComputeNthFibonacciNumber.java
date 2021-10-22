@@ -3,7 +3,7 @@ package solutions;
 import java.util.HashMap;
 
 public class ComputeNthFibonacciNumber {
-	static HashMap<Integer, Integer> lookup = new HashMap<Integer, Integer>();	
+	static HashMap<Integer, Integer> lookup = new HashMap<>();
 	public static int fib(int n) {
 		if (n==1 || n==2) {
 			return 1;

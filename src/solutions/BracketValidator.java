@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class BracketValidator {
 	public static boolean isValid(String s) {
-		Stack<Character> chars = new Stack<Character>();
+		Stack<Character> chars = new Stack<>();
 		for (int i=0; i<s.length(); i++) {
 			char ch = s.charAt(i);
 			if (ch == '(' || ch == '{' || ch == '[') {
@@ -18,11 +18,7 @@ public class BracketValidator {
 				return false;
 			}
 		}
-		
-		if (!chars.isEmpty()) {
-			return false;
-		}
-		
-		return true;
+
+		return chars.isEmpty();
 	}
 }

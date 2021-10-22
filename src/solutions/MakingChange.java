@@ -4,31 +4,29 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MakingChange {
-	public static ArrayList<String> permutate(int total, int[] denominations) {
-		ArrayList<String> output = new ArrayList<String>();
+	public static ArrayList<String> permute(int total, int[] denominations) {
+		ArrayList<String> output = new ArrayList<>();
 		
 		for(int i=denominations.length-1; i>= 0; i--) {
-			permutate(total - denominations[i], denominations, denominations[i], denominations[i] + "", output);
+			permute(total - denominations[i], denominations, denominations[i], denominations[i] + "", output);
 		}	
 		
 		return output;
 	}
 	
-	private static void permutate(int total, int[] denominations, int currentDenom, String outputSoFar, ArrayList<String> output) {
-		if (currentDenom > total) {
+	private static void permute(int total, int[] denominations, int currentDenomination, String outputSoFar, ArrayList<String> output) {
+		if (currentDenomination > total) {
 			denominations = Arrays.copyOf(denominations, denominations.length-1);
 		}
 		
-		if (total < 0) {
-			return;
-		} else if (total == 0) {
+		if (total == 0) {
 			output.add(outputSoFar);
-		} else {
-			for(int i=denominations.length-1; i>= 0; i--) {
-				if (denominations[i] <= currentDenom) {
-					permutate(total - denominations[i], denominations, denominations[i], outputSoFar + " " + denominations[i], output);
+		} else if (total > 0) {
+			for (int i = denominations.length - 1; i >= 0; i--) {
+				if (denominations[i] <= currentDenomination) {
+					permute(total - denominations[i], denominations, denominations[i], outputSoFar + " " + denominations[i], output);
 				}
-			}	
+			}
 		}
 	}
 	
@@ -36,10 +34,10 @@ public class MakingChange {
 		long[] memory = new long[total+1];	
 		
 		memory[0] = 1;
-		
-		for (int i=0; i<denominations.length; i++) {
-			for (int j=denominations[i]; j<=total; j++) {
-				memory[j] += memory[j - denominations[i]];
+
+		for (int denomination : denominations) {
+			for (int j = denomination; j <= total; j++) {
+				memory[j] += memory[j - denomination];
 			}
 		}
 				

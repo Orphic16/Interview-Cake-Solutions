@@ -3,8 +3,8 @@ package solutions;
 import java.util.Stack;
 
 public class LargestStack {
-	private Stack<Integer> s = new Stack<>();
-	private Stack<Integer> max_stack = new Stack<>();
+	private final Stack<Integer> s = new Stack<>();
+	private final Stack<Integer> max_stack = new Stack<>();
 
 	public void push(int number) {
 		s.push(number);

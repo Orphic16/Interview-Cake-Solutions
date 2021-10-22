@@ -9,7 +9,7 @@ public class BalancedBinaryTree {
 		int minLeafDepth = Integer.MAX_VALUE;
 		int maxLeafDepth = Integer.MIN_VALUE;
 		
-		Stack<NodeInfo> nodes = new Stack<NodeInfo>();
+		Stack<NodeInfo> nodes = new Stack<>();
 		nodes.push(new NodeInfo(root, 0));
 		
 		while(!nodes.isEmpty()) {

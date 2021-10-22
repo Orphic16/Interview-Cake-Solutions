@@ -9,7 +9,7 @@ public class MakingChangeTests {
 	@Test
 	public void test() {
 		int[] denominations = new int[]{1, 2, 3 };
-		ArrayList<String> list = MakingChange.permutate(4, denominations);
+		ArrayList<String> list = MakingChange.permute(4, denominations);
 		
 		assertEquals(4, list.size());
 		assertEquals("3 1", list.get(0));
@@ -21,7 +21,7 @@ public class MakingChangeTests {
 	@Test
 	public void test8() {
 		int[] denominations = new int[]{1, 5, 10, 25, 100 };
-		ArrayList<String> list = MakingChange.permutate(8, denominations);
+		ArrayList<String> list = MakingChange.permute(8, denominations);
 		
 		assertEquals(2, list.size());
 		assertEquals("5 1 1 1", list.get(0));
@@ -31,7 +31,7 @@ public class MakingChangeTests {
 	@Test
 	public void test12() {
 		int[] denominations = new int[]{1, 5, 10, 25, 100 };
-		ArrayList<String> list = MakingChange.permutate(12, denominations);
+		ArrayList<String> list = MakingChange.permute(12, denominations);
 		
 		assertEquals(4, list.size());
 		assertEquals("10 1 1", list.get(0));
@@ -43,7 +43,7 @@ public class MakingChangeTests {
 	@Test
 	public void test24() {
 		int[] denominations = new int[]{1, 5, 10, 25, 100 };
-		ArrayList<String> list = MakingChange.permutate(24, denominations);
+		ArrayList<String> list = MakingChange.permute(24, denominations);
 		
 		assertEquals(9, list.size());
 		assertEquals("10 10 1 1 1 1", list.get(0));
@@ -60,7 +60,7 @@ public class MakingChangeTests {
 	@Test
 	public void test25() {
 		int[] denominations = new int[]{1, 5, 10, 25, 100 };
-		ArrayList<String> list = MakingChange.permutate(25, denominations);
+		ArrayList<String> list = MakingChange.permute(25, denominations);
 		
 		assertEquals(13, list.size());
 		assertEquals("25", list.get(0));
