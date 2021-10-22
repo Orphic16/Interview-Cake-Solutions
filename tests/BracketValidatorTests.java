@@ -19,6 +19,11 @@ public class BracketValidatorTests {
 	public void testUnbalanced2() {
 		assertFalse(BracketValidator.isValid("[{()}]]"));
 	}
+
+	@Test
+	public void testUnbalanced3() {
+		assertFalse(BracketValidator.isValid("[)"));
+	}
 	
 	@Test
 	public void testInvalidChar() {

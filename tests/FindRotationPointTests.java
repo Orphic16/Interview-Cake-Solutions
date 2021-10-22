@@ -34,4 +34,10 @@ public class FindRotationPointTests {
 		String[] dictionary = new String[]{"b", "c", "d", "e", "a"};
 		assertEquals(4, FindRotationPoint.findRotationPoint(dictionary));
 	}
+
+	@Test
+	public void testNone() {
+		String[] dictionary = new String[]{"a"};
+		assertEquals(0, FindRotationPoint.findRotationPoint(dictionary));
+	}
 }
