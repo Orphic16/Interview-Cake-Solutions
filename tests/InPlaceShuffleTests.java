@@ -1,10 +1,10 @@
 import org.junit.jupiter.api.Test;
-import solutions.Shuffle;
+import solutions.InPlaceShuffle;
 
-public class ShuffleTests {
+public class InPlaceShuffleTests {
 	@Test
 	public void test() {
 		int[] array = new int[]{10, 7, 5, 8, 11, 9};
-		Shuffle.inplaceShuffle(array);
+		InPlaceShuffle.inplaceShuffle(array);
 	}	
 }

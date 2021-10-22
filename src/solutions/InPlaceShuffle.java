@@ -1,6 +1,6 @@
 package solutions;
 
-public class Shuffle {
+public class InPlaceShuffle {
 	public static void inplaceShuffle(int[] array) {
 		for(int i=array.length-1; i>=0; i--) {
 			int index = (int)(Math.random() * i + 1);
