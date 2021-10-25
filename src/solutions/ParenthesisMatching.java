@@ -1,7 +1,7 @@
 package solutions;
 
 public class ParenthesisMatching {
-	public static int find_match(String sentence, int index) {
+	public static int findMatch(String sentence, int index) {
 		int parens_counter = 1;
 
 		for (int i=index+1; i<sentence.length(); i++) {

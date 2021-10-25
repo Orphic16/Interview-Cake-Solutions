@@ -1,7 +1,7 @@
 package solutions;
 
 public class ProductOfAllOtherNumbers {
-	public static int[] find_product(int[] numbers) {
+	public static int[] findProduct(int[] numbers) {
 		int[] result = new int[numbers.length];
 
 		int[] productBeforeIndex = new int[numbers.length];
