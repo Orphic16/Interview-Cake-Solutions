@@ -1,8 +1,5 @@
 package solutions;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class ParenthesisMatching {
 	public static int find_match(String sentence, int index) {
 		int parens_counter = 1;
